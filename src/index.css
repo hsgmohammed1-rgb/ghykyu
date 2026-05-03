@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap');
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme {
+  --color-space-blue: #0B0F19;
+  --color-space-blue-light: #161C2D;
+  --color-neon-purple: #B026FF;
+  --color-neon-purple-dark: #8B5CF6;
+  --color-emerald-glow: rgba(16, 185, 129, 0.5);
+  --color-coral-red: #EF4444;
+  --color-glass-light: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+
+  --font-heading: 'Cairo', sans-serif;
+  --font-body: 'Tajawal', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-space-blue text-white font-body;
+    direction: rtl;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* Glassmorphism & 3D utilities */
+@layer utilities {
+  .glass-panel {
+    @apply bg-glass-light backdrop-blur-xl border border-glass-border rounded-[2rem] shadow-2xl;
+  }
+  
+  .glass-card {
+    @apply bg-space-blue-light/80 backdrop-blur-md border border-white/10 rounded-2xl;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  
+  .btn-3d {
+    @apply relative border-2 transition-all duration-200;
+    transform-style: preserve-3d;
+    box-shadow: 0 6px 0 -2px var(--btn-shadow-color, rgba(255,255,255,0.2)),
+                0 6px 0 0 inset var(--btn-shadow-color, rgba(255,255,255,0.2));
+  }
+  
+  .btn-3d:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 -2px var(--btn-shadow-color, rgba(255,255,255,0.2)),
+                0 2px 0 0 inset var(--btn-shadow-color, rgba(255,255,255,0.2));
+  }
+
+  .btn-3d-purple {
+    --btn-shadow-color: #7214aa;
+    @apply bg-gradient-to-b from-neon-purple to-neon-purple-dark border-[#8a19cc] text-white;
+  }
+
+  .btn-3d-emerald {
+    --btn-shadow-color: #047857;
+    @apply bg-gradient-to-b from-emerald-400 to-emerald-600 border-emerald-700 text-white;
+  }
+
+  .btn-3d-red {
+    --btn-shadow-color: #991b1b;
+    @apply bg-gradient-to-b from-coral-red to-red-600 border-red-700 text-white;
+  }
+
+  .btn-3d-blue {
+    --btn-shadow-color: #0f172a;
+    @apply bg-gradient-to-b from-space-blue-light to-space-blue border-white/20 text-white;
+  }
+
+  .btn-3d-blue:hover {
+    @apply from-space-blue-light to-[#1f2937];
+  }
+  
+  .glow-success {
+    box-shadow: 0 0 20px var(--color-emerald-glow), inset 0 0 10px rgba(16, 185, 129, 0.2);
+  }
+  
+  .glow-neon {
+    box-shadow: 0 0 20px rgba(176, 38, 255, 0.6), inset 0 0 10px rgba(176, 38, 255, 0.2);
+  }
+  
+  .shape-3d {
+    box-shadow: 
+      inset -10px -10px 20px rgba(0,0,0,0.5),
+      inset 10px 10px 20px rgba(255,255,255,0.2),
+      10px 10px 30px rgba(0,0,0,0.5);
+  }
+}
+
+/* Animated Mesh Background (Optimized) */
+.mesh-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #0B0F19;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,0.2) 0, transparent 50%);
+  /* Animation removed as it causes severe layout repaints and lag on many devices */
+}
+
