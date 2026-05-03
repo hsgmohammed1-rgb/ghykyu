@@ -31,9 +31,12 @@ export function Home() {
       return;
     }
 
-    // Pass user details via state
+    // Pass user details via state AND store in session for persistence (refresh support)
+    const sessionData = { name, avatar };
+    sessionStorage.setItem(`room_session_${roomId}`, JSON.stringify(sessionData));
+    
     navigate(`/room/${roomId}`, { 
-      state: { name, avatar }
+      state: sessionData
     });
   };
 

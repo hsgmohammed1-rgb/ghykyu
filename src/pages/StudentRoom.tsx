@@ -26,7 +26,14 @@ export function StudentRoom() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const state = location.state as { name: string; avatar: string } | null;
+  // 1. Recover state from location OR sessionStorage (to handle refreshes)
+  const [sessionState, setSessionState] = useState<{ name: string; avatar: string } | null>(() => {
+    if (location.state?.name) return location.state;
+    const saved = sessionStorage.getItem(`room_session_${id}`);
+    return saved ? JSON.parse(saved) : null;
+  });
+  
+  const state = sessionState;
 
   useEffect(() => {
     if (!state?.name) {
@@ -70,13 +77,14 @@ export function StudentRoom() {
 
   // Reset local state when a new question starts
   useEffect(() => {
+    setSelectedAnswer(null);
+    setHasAnswered(false);
+    setAnswerTimeBonus(0);
+    // Only update DB status if we are actually starting a new question (not just a reveal)
     if (!roomState?.show_answer) {
-      setSelectedAnswer(null);
-      setHasAnswered(false);
-      setAnswerTimeBonus(0);
       updateMyState({ status: 'idle' });
     }
-  }, [roomState?.current_question_index, roomState?.show_answer]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [roomState?.current_question_index]); // ONLY depend on question index for the reset
 
   // Handle Score Evaluation when Admin reveals answer
   useEffect(() => {

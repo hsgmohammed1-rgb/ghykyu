@@ -53,18 +53,29 @@ export function useRealtime(roomId: string, playerConfig?: { name: string; avata
           
           if (rData) setRoomState(rData);
 
-          // Check if player with same name exists in this room
-          const { data: existingPlayer } = await supabase
-            .from('players')
-            .select('*')
-            .eq('room_code', roomId)
-            .eq('name', playerConfig.name)
-            .single();
+          // Robust Reconnection: Check localStorage first, then fallback to name lookup
+          const savedPlayerId = localStorage.getItem(`player_id_${roomId}`);
+          let existingPlayer: Player | null = null;
+
+          if (savedPlayerId) {
+            const { data: pByOldId } = await supabase.from('players').select('*').eq('id', savedPlayerId).single();
+            if (pByOldId && pByOldId.room_code === roomId) {
+              existingPlayer = pByOldId as Player;
+            }
+          }
+
+          if (!existingPlayer) {
+            const { data: pByName } = await supabase.from('players').select('*').eq('room_code', roomId).eq('name', playerConfig.name).single();
+            if (pByName) {
+              existingPlayer = pByName as Player;
+            }
+          }
 
           if (existingPlayer) {
             // Reconnect existing player!
             playerId = existingPlayer.id;
             setMyId(playerId);
+            localStorage.setItem(`player_id_${roomId}`, playerId);
             
             await supabase.from('players').update({
               status: 'idle',
@@ -75,6 +86,7 @@ export function useRealtime(roomId: string, playerConfig?: { name: string; avata
             // New player
             playerId = Math.random().toString(36).substring(2, 10);
             setMyId(playerId);
+            localStorage.setItem(`player_id_${roomId}`, playerId);
             
             await supabase.from('players').insert({
               id: playerId,

@@ -65,7 +65,10 @@ export function AdminDashboard() {
         setTimeLeft(remain);
         
         if (remain === 0) {
-          broadcastState({ show_answer: true });
+          // Give students a 1-second grace period for network sync before forcing reveal
+          setTimeout(() => {
+            broadcastState({ show_answer: true });
+          }, 1000);
         }
       };
       
