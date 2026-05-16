@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg13" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow13"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg13)" rx="20"/>
+  <text x="400" y="45" text-anchor="middle" fill="#e0e0ff" font-size="24" font-family="Arial" font-weight="bold">زاوية محيطية 70°</text>
+  <circle cx="400" cy="210" r="150" fill="rgba(100,180,255,0.08)" stroke="#64b5ff" stroke-width="3"/>
+  <circle cx="400" cy="210" r="5" fill="#fff"/>
+  <text x="405" y="203" fill="#fff" font-size="18" font-weight="bold">م</text>
+  <circle cx="300" cy="75" r="6" fill="#ff6b6b"/><text x="280" y="63" fill="#ff6b6b" font-size="24" font-family="Arial" font-weight="bold">أ</text>
+  <circle cx="560" cy="260" r="6" fill="#ff6b6b"/><text x="575" y="270" fill="#ff6b6b" font-size="24" font-family="Arial" font-weight="bold">ب</text>
+  <circle cx="290" cy="330" r="6" fill="#ff6b6b"/><text x="270" y="355" fill="#ff6b6b" font-size="24" font-family="Arial" font-weight="bold">ج</text>
+  <line x1="300" y1="75" x2="290" y2="330" stroke="#69db7c" stroke-width="2"/>
+  <line x1="300" y1="75" x2="560" y2="260" stroke="#69db7c" stroke-width="2"/>
+  <line x1="400" y1="210" x2="300" y2="75" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="400" y1="210" x2="560" y2="260" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <path d="M 315,85 A 20 20 0 0 1 325,95" stroke="#69db7c" stroke-width="2" fill="none"/>
+  <text x="330" y="95" fill="#69db7c" font-size="18" font-weight="bold">70°</text>
+  <path d="M 390,195 A 15 15 0 0 1 400,195" stroke="#ffd700" stroke-width="2" fill="none"/>
+  <text x="405" y="230" fill="#ffd700" font-size="16">المنعكسة=؟</text>
+  <text x="400" y="385" text-anchor="middle" fill="#8899cc" font-size="15">الزاوية المركزية المنعكسة = ؟</text>
+</svg>

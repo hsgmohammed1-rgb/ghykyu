@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg11" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow11"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg11)" rx="20"/>
+  <text x="400" y="45" text-anchor="middle" fill="#e0e0ff" font-size="24" font-family="Arial" font-weight="bold">دائرة مركزها (2،-3) ونصف قطرها 5</text>
+  <line x1="50" y1="250" x2="750" y2="250" stroke="#334" stroke-width="1"/>
+  <line x1="350" y1="30" x2="350" y2="370" stroke="#334" stroke-width="1"/>
+  <circle cx="470" cy="170" r="120" fill="rgba(100,180,255,0.1)" stroke="#64b5ff" stroke-width="3"/>
+  <circle cx="470" cy="170" r="5" fill="#ffd700"/>
+  <text x="475" y="163" fill="#ffd700" font-size="20" font-weight="bold" filter="url(#glow11)">(2،-3)</text>
+  <line x1="470" y1="170" x2="560" y2="230" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="560" y="240" fill="#ff6b6b" font-size="18" font-weight="bold">نق=5</text>
+  <text x="400" y="385" text-anchor="middle" fill="#8899cc" font-size="15">(س-د)²+(ص-هـ)²=نق²</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow8"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg8)" rx="20"/>
+  <text x="400" y="50" text-anchor="middle" fill="#e0e0ff" font-size="24" font-family="Arial" font-weight="bold">معادلة الدائرة</text>
+  <line x1="400" y1="60" x2="400" y2="370" stroke="#334" stroke-width="1"/>
+  <line x1="50" y1="210" x2="750" y2="210" stroke="#334" stroke-width="1"/>
+  <circle cx="400" cy="210" r="120" fill="rgba(100,180,255,0.1)" stroke="#64b5ff" stroke-width="3"/>
+  <line x1="400" y1="210" x2="520" y2="210" stroke="#ffd700" stroke-width="2.5"/>
+  <circle cx="400" cy="210" r="4" fill="#fff"/>
+  <text x="520" y="205" fill="#ffd700" font-size="20" font-weight="bold">نق</text>
+  <text x="390" y="230" fill="#fff" font-size="14">(0,0)</text>
+  <text x="400" y="360" text-anchor="middle" fill="#64b5ff" font-size="28" font-family="Arial" font-weight="bold" filter="url(#glow8)">س² + ص² = نق²</text>
+  <text x="400" y="390" text-anchor="middle" fill="#8899cc" font-size="15">قارن المعادلات بالصيغة القياسية</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg7)" rx="20"/>
+  <text x="400" y="50" text-anchor="middle" fill="#e0e0ff" font-size="24" font-family="Arial" font-weight="bold">أي شكل يمكن أن يكون رباعياً دائرياً؟</text>
+  <circle cx="400" cy="210" r="155" fill="rgba(100,180,255,0.06)" stroke="#64b5ff" stroke-width="2" stroke-dasharray="8,4"/>
+  <polygon points="250,300 550,300 480,120 320,120" fill="rgba(100,180,255,0.12)" stroke="#ffd700" stroke-width="3"/>
+  <line x1="285" y1="300" x2="275" y2="290" stroke="#69db7c" stroke-width="2"/>
+  <line x1="275" y1="290" x2="285" y2="280" stroke="#69db7c" stroke-width="2"/>
+  <line x1="515" y1="300" x2="525" y2="290" stroke="#69db7c" stroke-width="2"/>
+  <line x1="525" y1="290" x2="515" y2="280" stroke="#69db7c" stroke-width="2"/>
+  <text x="260" y="265" fill="#69db7c" font-size="16" transform="rotate(-20,260,265)">متساويان</text>
+  <text x="530" y="265" fill="#69db7c" font-size="16" transform="rotate(20,530,265)">متساويان</text>
+  <text x="260" y="295" fill="#ffd700" font-size="18">α</text>
+  <text x="530" y="295" fill="#ffd700" font-size="18">α</text>
+  <text x="310" y="130" fill="#ff6b6b" font-size="18">β</text>
+  <text x="480" y="130" fill="#ff6b6b" font-size="18">β</text>
+</svg>

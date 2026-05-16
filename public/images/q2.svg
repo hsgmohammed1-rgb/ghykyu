@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow2"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg2)" rx="20"/>
+  <text x="400" y="50" text-anchor="middle" fill="#e0e0ff" font-size="24" font-family="Arial" font-weight="bold">زاويتان تشتركان في نفس القوس</text>
+  <circle cx="400" cy="210" r="140" fill="rgba(100,180,255,0.08)" stroke="#64b5ff" stroke-width="3"/>
+  <circle cx="400" cy="70" r="6" fill="#ff6b6b"/><text x="410" y="58" fill="#ff6b6b" font-size="24" font-family="Arial" font-weight="bold">أ</text>
+  <circle cx="520" cy="180" r="6" fill="#ffd700"/><text x="535" y="188" fill="#ffd700" font-size="24" font-family="Arial" font-weight="bold">ب</text>
+  <circle cx="300" cy="310" r="6" fill="#69db7c"/><text x="280" y="340" fill="#69db7c" font-size="24" font-family="Arial" font-weight="bold">ج</text>
+  <circle cx="480" cy="310" r="6" fill="#da77f2"/><text x="490" y="340" fill="#da77f2" font-size="24" font-family="Arial" font-weight="bold">د</text>
+  <path d="M 520,180 A 140 140 0 0 1 300,310" stroke="#ffd700" stroke-width="3" fill="none" stroke-dasharray="8,4" opacity="0.7"/>
+  <line x1="400" y1="70" x2="520" y2="180" stroke="#69db7c" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="400" y1="70" x2="300" y2="310" stroke="#69db7c" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="480" y1="310" x2="520" y2="180" stroke="#da77f2" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="480" y1="310" x2="300" y2="310" stroke="#da77f2" stroke-width="2" stroke-dasharray="5,3"/>
+  <path d="M 420,85 A 20 20 0 0 1 430,95" stroke="#69db7c" stroke-width="2" fill="none"/>
+  <path d="M 500,298 A 20 20 0 0 0 475,305" stroke="#da77f2" stroke-width="2" fill="none"/>
+  <text x="435" y="100" fill="#69db7c" font-size="18" font-weight="bold">θ</text>
+  <text x="495" y="315" fill="#da77f2" font-size="18" font-weight="bold">θ</text>
+  <text x="585" y="210" fill="#ffd700" font-size="22" font-weight="bold" filter="url(#glow2)">?</text>
+</svg>

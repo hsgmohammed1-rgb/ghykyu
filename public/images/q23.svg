@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg23" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow23"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg23)" rx="20"/>
+  <text x="400" y="45" text-anchor="middle" fill="#e0e0ff" font-size="24" font-family="Arial" font-weight="bold">زاوية مماسية 45°</text>
+  <circle cx="380" cy="230" r="140" fill="rgba(100,180,255,0.08)" stroke="#64b5ff" stroke-width="3"/>
+  <line x1="80" y1="120" x2="650" y2="380" stroke="#ff6b6b" stroke-width="3"/>
+  <circle cx="280" cy="180" r="7" fill="#ffd700"/>
+  <text x="255" y="168" fill="#ffd700" font-size="26" font-family="Arial" font-weight="bold">أ</text>
+  <line x1="280" y1="180" x2="450" y2="110" stroke="#69db7c" stroke-width="2.5"/>
+  <circle cx="450" cy="110" r="6" fill="#69db7c"/>
+  <text x="458" y="98" fill="#69db7c" font-size="26" font-family="Arial" font-weight="bold">ب</text>
+  <path d="M 280,180 L 300,170" stroke="#ffd700" stroke-width="2" fill="none"/>
+  <path d="M 280,180 L 290,190" stroke="#ffd700" stroke-width="2" fill="none"/>
+  <path d="M 285,178 A 10 10 0 0 1 286 186" stroke="#ffd700" stroke-width="2" fill="none"/>
+  <text x="305" y="178" fill="#ffd700" font-size="18" font-weight="bold">45°</text>
+  <circle cx="380" cy="230" r="4" fill="#fff"/>
+  <text x="385" y="238" fill="#fff" font-size="14">م</text>
+  <line x1="380" y1="230" x2="450" y2="110" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="400" y="140" fill="#ffd700" font-size="16" font-weight="bold" filter="url(#glow23)">المركزية=؟</text>
+</svg>

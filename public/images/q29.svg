@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg29" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow29"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg29)" rx="20"/>
+  <text x="400" y="45" text-anchor="middle" fill="#e0e0ff" font-size="24" font-family="Arial" font-weight="bold">(س-4)²+(ص+3)²=25</text>
+  <line x1="50" y1="200" x2="750" y2="200" stroke="#334" stroke-width="1"/>
+  <line x1="400" y1="50" x2="400" y2="350" stroke="#334" stroke-width="1"/>
+  <circle cx="480" cy="240" r="80" fill="rgba(100,180,255,0.1)" stroke="#64b5ff" stroke-width="3"/>
+  <circle cx="480" cy="240" r="5" fill="#ffd700"/>
+  <text x="488" y="233" fill="#ffd700" font-size="18" font-weight="bold" filter="url(#glow29)">المركز=؟</text>
+  <text x="400" y="385" text-anchor="middle" fill="#8899cc" font-size="15">في الصورة (س-د)²+(ص-هـ)²=نق²، المركز (د،هـ)</text>
+</svg>

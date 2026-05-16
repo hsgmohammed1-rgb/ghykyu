@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg1)" rx="20"/>
+  <polygon points="200,120 600,100 550,320 150,300" fill="rgba(100,180,255,0.15)" stroke="#64b5ff" stroke-width="3"/>
+  <circle cx="200" cy="120" r="5" fill="#ff6b6b"/><text x="185" y="108" fill="#ff6b6b" font-size="26" font-family="Arial" font-weight="bold">أ</text>
+  <circle cx="600" cy="100" r="5" fill="#ff6b6b"/><text x="610" y="88" fill="#ff6b6b" font-size="26" font-family="Arial" font-weight="bold">ب</text>
+  <circle cx="550" cy="320" r="5" fill="#ff6b6b"/><text x="560" y="345" fill="#ff6b6b" font-size="26" font-family="Arial" font-weight="bold">ج</text>
+  <circle cx="150" cy="300" r="5" fill="#ff6b6b"/><text x="125" y="325" fill="#ff6b6b" font-size="26" font-family="Arial" font-weight="bold">د</text>
+  <path d="M 200,120 L 230,118" stroke="#ffd700" stroke-width="2" fill="none"/>
+  <path d="M 200,120 L 198,150" stroke="#ffd700" stroke-width="2" fill="none"/>
+  <path d="M 205,120 A 15 15 0 0 0 200 135" stroke="#ffd700" stroke-width="2" fill="none"/>
+  <text x="220" y="140" fill="#ffd700" font-size="22" font-weight="bold" filter="url(#glow)">95°</text>
+  <text x="520" y="310" fill="#ff6b6b" font-size="32" font-weight="bold">?</text>
+</svg>

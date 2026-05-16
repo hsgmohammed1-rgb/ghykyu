@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg17" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg17)" rx="20"/>
+  <text x="400" y="45" text-anchor="middle" fill="#e0e0ff" font-size="24" font-family="Arial" font-weight="bold">النقطة (6،8) والدائرة س²+ص²=100</text>
+  <line x1="50" y1="200" x2="750" y2="200" stroke="#334" stroke-width="1"/>
+  <line x1="400" y1="30" x2="400" y2="370" stroke="#334" stroke-width="1"/>
+  <circle cx="400" cy="200" r="100" fill="rgba(100,180,255,0.1)" stroke="#64b5ff" stroke-width="3"/>
+  <circle cx="400" cy="200" r="4" fill="#fff"/>
+  <text x="405" y="195" fill="#fff" font-size="16">(0,0)</text>
+  <circle cx="460" cy="120" r="7" fill="#ffd700"/>
+  <text x="468" y="115" fill="#ffd700" font-size="18" font-weight="bold">(6,8)</text>
+  <line x1="400" y1="200" x2="460" y2="120" stroke="#ff6b6b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="420" y="155" fill="#ff6b6b" font-size="15">نق=10</text>
+  <text x="400" y="385" text-anchor="middle" fill="#8899cc" font-size="15">أوجد موقع النقطة</text>
+</svg>

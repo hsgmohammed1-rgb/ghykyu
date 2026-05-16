@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg22" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg22)" rx="20"/>
+  <text x="400" y="45" text-anchor="middle" fill="#e0e0ff" font-size="24" font-family="Arial" font-weight="bold">أ=3س، ج=2س</text>
+  <circle cx="400" cy="210" r="155" fill="rgba(100,180,255,0.07)" stroke="#64b5ff" stroke-width="2.5"/>
+  <polygon points="300,70 560,130 490,330 210,290" fill="rgba(100,180,255,0.1)" stroke="#ffd700" stroke-width="3"/>
+  <circle cx="300" cy="70" r="6" fill="#ff6b6b"/><text x="280" y="58" fill="#ff6b6b" font-size="24" font-family="Arial" font-weight="bold">أ</text>
+  <circle cx="560" cy="130" r="6" fill="#ff6b6b"/><text x="575" y="120" fill="#ff6b6b" font-size="24" font-family="Arial" font-weight="bold">ب</text>
+  <circle cx="490" cy="330" r="6" fill="#ff6b6b"/><text x="500" y="355" fill="#ff6b6b" font-size="24" font-family="Arial" font-weight="bold">ج</text>
+  <circle cx="210" cy="290" r="6" fill="#ff6b6b"/><text x="185" y="312" fill="#ff6b6b" font-size="24" font-family="Arial" font-weight="bold">د</text>
+  <text x="305" y="105" fill="#ff6b6b" font-size="20" font-weight="bold">3س</text>
+  <text x="480" y="315" fill="#ff6b6b" font-size="20" font-weight="bold">2س</text>
+  <text x="400" y="385" text-anchor="middle" fill="#8899cc" font-size="15">زاويتان متقابلتان ← أوجد قيمة س</text>
+</svg>
