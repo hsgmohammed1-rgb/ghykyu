@@ -86,7 +86,7 @@ export function useRealtime(roomId: string, playerConfig?: { name: string; avata
                 code: roomId,
                 status: 'lobby',
                 current_question_index: 0,
-                question_timer: 40,
+                question_timer: 45,
                 show_answer: false
               })
               .select()

@@ -126,7 +126,7 @@ function RoomContent({ roomId, sessionState }: { roomId: string; sessionState: {
 
   const me = useMemo(() => players.find(p => p.id === myId), [players, myId]);
 
-  const [timeLeft, setTimeLeft] = useState(40);
+  const [timeLeft, setTimeLeft] = useState(45);
 
   useEffect(() => {
     const perfEntries = performance.getEntriesByType('navigation');
@@ -153,14 +153,14 @@ function RoomContent({ roomId, sessionState }: { roomId: string; sessionState: {
 
       const tick = () => {
         const elapsed = Math.floor((Date.now() - localStartTime) / 1000);
-        const remain = Math.max(0, 40 - elapsed);
+        const remain = Math.max(0, 45 - elapsed);
         setTimeLeft(remain);
       };
 
       tick();
       interval = setInterval(tick, 500);
     } else {
-      setTimeLeft(roomState?.show_answer ? 0 : 40);
+      setTimeLeft(roomState?.show_answer ? 0 : 45);
     }
 
     return () => clearInterval(interval);
@@ -180,7 +180,7 @@ function RoomContent({ roomId, sessionState }: { roomId: string; sessionState: {
 
     if (!roomState.show_answer) {
       updateMyState({ status: 'idle' });
-      setTimeLeft(40);
+      setTimeLeft(45);
     }
   }, [roomState?.current_question_index]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -204,7 +204,7 @@ function RoomContent({ roomId, sessionState }: { roomId: string; sessionState: {
 
           const newStreak = (me?.streak || 0) + 1;
           const basePoints = Math.min((roomState.current_question_index + 1) * 100, 500);
-          const timeMultiplier = 1 + (timeBonus / 40);
+          const timeMultiplier = 1 + (timeBonus / 45);
           const pointsMultiplier = newStreak >= 2 ? 2 : 1;
           const pointsGained = Math.round(basePoints * timeMultiplier * pointsMultiplier);
 
@@ -363,7 +363,7 @@ function RoomContent({ roomId, sessionState }: { roomId: string; sessionState: {
                       timeLeft > 5 ? "bg-gradient-to-r from-yellow-500 to-yellow-400" : "bg-gradient-to-r from-coral-red to-red-500"
                   )}
                   initial={{ width: '100%' }}
-                  animate={{ width: `${roomState.show_answer ? 0 : (timeLeft / 40) * 100}%` }}
+                  animate={{ width: `${roomState.show_answer ? 0 : (timeLeft / 45) * 100}%` }}
                   transition={{ duration: 1, ease: 'linear' }}
                 />
               </div>

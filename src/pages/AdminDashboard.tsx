@@ -42,7 +42,7 @@ export function AdminDashboard() {
       status: 'playing',
       current_question_index: 0,
       show_answer: false,
-      question_timer: Math.floor(Date.now() / 1000) + 40
+      question_timer: Math.floor(Date.now() / 1000) + 45
     });
     addToast('🚀 بدأ التحدي!', 'success');
   }, [broadcastState, addToast, clearAutoStop]);
@@ -64,7 +64,7 @@ export function AdminDashboard() {
       broadcastState({
         current_question_index: nextIdx,
         show_answer: false,
-        question_timer: Math.floor(Date.now() / 1000) + 40
+        question_timer: Math.floor(Date.now() / 1000) + 45
       });
     } else {
       broadcastState({ status: 'leaderboard' });
@@ -83,7 +83,7 @@ export function AdminDashboard() {
     broadcastState({ status: 'explaining' });
   }, [broadcastState, clearAutoStop]);
 
-  const [timeLeft, setTimeLeft] = useState(40);
+  const [timeLeft, setTimeLeft] = useState(45);
 
   // Smooth timer - display only, no side effects
   useEffect(() => {
@@ -93,14 +93,14 @@ export function AdminDashboard() {
 
       const tick = () => {
         const elapsed = Math.floor((Date.now() - localStartTime) / 1000);
-        const remain = Math.max(0, 40 - elapsed);
+        const remain = Math.max(0, 45 - elapsed);
         setTimeLeft(remain);
       };
 
       tick();
       interval = setInterval(tick, 500);
     } else {
-      setTimeLeft(roomState?.show_answer ? 0 : 40);
+      setTimeLeft(roomState?.show_answer ? 0 : 45);
     }
 
     return () => clearInterval(interval);
@@ -117,7 +117,7 @@ export function AdminDashboard() {
 
     const checkTimeout = () => {
       const elapsed = Math.floor((Date.now() - localStartTime) / 1000);
-      if (elapsed >= 41) { // 40s + 1s grace
+      if (elapsed >= 46) { // 45s + 1s grace
         clearAutoStop();
         broadcastState({ show_answer: true });
       } else {
@@ -317,7 +317,7 @@ export function AdminDashboard() {
                           timeLeft > 5 ? "bg-gradient-to-r from-yellow-500 to-yellow-400" : "bg-gradient-to-r from-coral-red to-red-500"
                         )}
                         initial={{ width: '100%' }}
-                        animate={{ width: `${roomState.show_answer ? 0 : (timeLeft / 40) * 100}%` }}
+                        animate={{ width: `${roomState.show_answer ? 0 : (timeLeft / 45) * 100}%` }}
                         transition={{ duration: 1, ease: 'linear' }}
                       />
                     </div>
